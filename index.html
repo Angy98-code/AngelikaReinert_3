@@ -11,23 +11,27 @@
 </head>
 
 <body>
-    <div class="containerprincipal">
+    <div class="containerpage1">
         <header>
 
             <img src="images/ohmyfood.png" alt="logo" id="logo" />
+        </header>
+        <div class="header2">
             <div class="containerinput">
 
                 <div class="input1"><i class="fas fa-map-marker-alt iicon"></i></div>
 
-                <div class="input2"><input type="search" name="nomdelaville" placeholder="Paris, Belleville"
-                        onclick="this.value='';" /></div>
+                <div class="input2"><strong><input type="search" name="nomdelaville" placeholder="Paris, Belleville"
+                            onclick="this.value='';" /></strong></div>
             </div>
 
-        </header>
+        </div>
         <section>
             <aside>
                 <div class="aside">
-                    <h1>Réservez le menu qui <br />vous convient</h1>
+                    <strong>
+                        <h1>Réservez le menu qui <br />vous convient</h1>
+                    </strong>
                     <h3>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h3>
 
                     <button class="explorer" type="button">Explorer nos restaurants</button>
@@ -68,7 +72,7 @@
                             </div>
                             <div class="icon"><i class="fas fa-store"></i></div>
                             <div class="text">
-                                <p>Composez votre menu</p>
+                                <p>Dégustez au restaurant</p>
                             </div>
                         </a>
                     </div>
@@ -78,7 +82,7 @@
                 <H1>Restaurants</H1>
                 <div class="containercarte">
 
-                    <div class="carte palette">
+                    <a href="#palette" class="carte palette">
                         <img src="images/palette.jpg" alt="La palette du goût" />
                         <div class="rectangle">
                             <p class="textneu">Nouveau</p>
@@ -89,12 +93,12 @@
                                 <h3>Ménilmontant</h3>
                             </div>
                             <div class="containerheart">
-                                <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                                <i class="far fa-heart boutoncoeur"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="carte lanote">
+                    <a href="#note" class="carte lanote">
                         <img src="images/note.jpg" alt="La note enchantée" />
                         <div class="rectangle">
                             <p class="textneu">Nouveau</p>
@@ -105,12 +109,12 @@
                                 <h3>Charonne</h3>
                             </div>
                             <div class="containerheart">
-                                <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                                <i class="far fa-heart boutoncoeur"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="carte francaise">
+                    <a href="#francaise" class="carte francaise">
                         <img src="images/francaise.jpg" alt="A la française" />
                         <div class="coeur">
                             <div class="descriptif">
@@ -125,12 +129,13 @@
 
                             -->
                             <div class="containerheart">
-                                <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                                <i class="far fa-heart boutoncoeur"></i>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="carte delice">
+                        </div>
+                    </a>
+
+                    <a href="#delice" class="carte delice">
                         <img src="images/delice.jpg" alt="Le délice des sens" />
                         <div class="coeur">
                             <div class="descriptif">
@@ -138,10 +143,10 @@
                                 <h3>Folie-Méricourt</h3>
                             </div>
                             <div class="containerheart">
-                                <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                                <i class="far fa-heart boutoncoeur"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </article>
         </section>
@@ -150,10 +155,40 @@
             <a href=""><i class="fas fa-utensils"></i> Proposer un restaurant</a>
             <a href=""><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
             <a href="">Mentions légales</a>
-            <a href="">Contact</a>
+            <a href="reinert.angelika@gmail.com">contact</a>
         </footer>
 
     </div>
+    <div class="containerpage2"></div>
+
+    <header class="headerpage2">
+
+        <img src="images/ohmyfood.png" alt="logo" id="logo" />
+        <i class="fas fa-arrow-left"></i>
+    </header>
+    <div>
+        <img src="images/palette.jpg" class="photobg" alt="La palette du goût" />
+
+    </div>
+
+    <article class="articlepage2">
+        <div class="articleresto">
+            <div class="titre" id="palette">La palette du goût</div>
+            <div class="containerheart">
+                <i class="far fa-heart boutoncoeur"></i>
+            </div>
+        </div>
+
+
+    </article>
+    <footer>
+        <img src="images/ohmyfood.png" alt="logo" class="logo" /><br />
+        <a href=""><i class="fas fa-utensils"></i> Proposer un restaurant</a>
+        <a href=""><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
+        <a href="">Mentions légales</a>
+        <a href="ohmyfood@gmail.com">contact</a>
+    </footer>
+
 </body>
 
 </html>
