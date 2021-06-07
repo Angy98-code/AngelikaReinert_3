@@ -28,14 +28,20 @@ body {
   font-family: "shrikland", "roboto", arial, sans-serif;
 }
 
-$primaire: #9356dc;
-$secondaire: #ff79da;
-$tertiaire: #99e2d0;
-$navbutton: #f2f2f2;
-$fontnombre: 15px;
-$fontlogotitre: "shrikhand";
-$fonttexte: "roboto";
+/*
+@import "./sass/animation";
 
+.pageacceuil {
+  width: 100%;
+
+  opacity: 0.6;
+  background-color: white;
+  animation-duration: 3s;
+}*/
+@import "./sass/variables";
+@mixin shadow {
+  box-shadow: 5px 8px 14px #e5e4e4;
+}
 .containerpage1 {
   font-family: $fonttexte;
 }
@@ -73,7 +79,6 @@ header {
 header img {
   width: 170px;
   padding-bottom: 10px;
-  height: auto;
   border-radius: 0;
 }
 /*page2*/
@@ -225,6 +230,7 @@ nav p {
   border-radius: 25px;
   border: none;
   color: white;
+  @include shadow;
   cursor: pointer;
   background: linear-gradient(to bottom, $secondaire 0%, $primaire 100%);
   /*#ff79da*/
@@ -263,10 +269,9 @@ aside h3 {
   font-family: "roboto";
 }
 
-header i {
+/*header i {
   position: absolute;
-}
-
+}*/
 article {
   display: flex;
   flex-wrap: wrap;
@@ -289,10 +294,9 @@ article {
   flex-wrap: wrap;
   background-color: white;
   border-radius: 15px;
-  width: 330px;
   height: 250px;
   width: 100%;
-  box-shadow: 5px 8px 14px #e5e4e4;
+  @include shadow;
   text-decoration: none;
   color: black;
   /*&__button {
@@ -471,53 +475,114 @@ background-color: white;
 }*/
 
 /* FOOTER */
-
-footer {
-  background-color: #303030;
-  padding-top: 30px;
-  color: white;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-  flex-wrap: wrap;
-  padding: 30px 0 30px 20px;
-}
-
-footer img {
-  width: 100px;
-  object-fit: cover;
-  height: auto;
-  filter: invert(100%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(800%)
-    contrast(200%);
-  padding-bottom: 8px;
-  border-radius: 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
-  font-family: "roboto";
-  font-size: 18px;
-}
-
-footer i {
-  font-size: 12px;
-  padding-right: 5px;
-}
+@import "./sass/footer";
 
 /* page 2 */
+
 .photobg {
   width: 100%;
-  height: 195px;
+
   object-fit: cover;
 }
-.articleresto {
+/*.articleresto {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}*/
+.articleresto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-arrow-left {
+  float: left;
+  position: absolute;
+  font-size: 18px;
+  z-index: 1;
+  padding-top: 6px;
 }
 .articlepage2 {
-  height: 800px;
-  background-color: orange;
+  border-radius: 40px 40px 0 0;
+
+  padding: 35px 15px 70px 15px;
+  background-color: rgb(246, 246, 246);
+}
+.titre {
+  font-size: 25px;
+  font-family: $fontlogotitre;
+}
+/*.photobg {
+  position: relative;
+}*/
+main {
+  position: relative;
+}
+main .menu {
+  border-bottom: $tertiaire 4px solid;
+  width: 12%;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 40px 0 10px 0;
+}
+
+.cartemain {
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px 0 15px;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border-radius: 15px;
+  @include shadow;
+  text-decoration: none;
+  color: black;
+}
+.arrow {
+  display: inline;
+  top: 40px;
+}
+/*   on fait comment !!!! */
+.cartemain:hover {
+  z-index: 1;
+}
+main .ligne2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 7px;
+  font-size: 13px;
+}
+main h2 {
+  margin: 0;
+  padding-top: 14px;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main h3 {
+  margin: 0;
+  font-weight: 100;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gauche {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .prix {
+  left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+main .commander {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
