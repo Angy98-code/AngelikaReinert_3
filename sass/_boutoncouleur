@@ -1,0 +1,14 @@
+$explorer :
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to bottom, $secondaire 0%, $primaire 100%);
+  /*#ff79da*/
+  /* background: radial-gradient(farthest-corner at top, #ff79da, #9356d6);*/
+  /*lighten(#ff79da, 1) -15%,
+    darken(#9356d6, 1) 100%
+  );*/
+  font-size: 16px;

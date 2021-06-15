@@ -1,0 +1,33 @@
+footer {
+  background-color: #303030;
+  padding-top: 30px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  flex-wrap: wrap;
+  padding: 30px 0 30px 20px;
+  font-family: "roboto";
+  img {
+    width: 100px;
+    object-fit: cover;
+    height: auto;
+    filter: invert(100%) sepia(1%) saturate(1%) hue-rotate(1deg)
+      brightness(800%) contrast(200%);
+    padding-bottom: 8px;
+    border-radius: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    font-size: 18px;
+  }
+
+  i {
+    font-size: 12px;
+    padding-right: 5px;
+  }
+}
