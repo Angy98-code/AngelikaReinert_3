@@ -39,12 +39,13 @@ body {
   font-family: "roboto";
 }
 
-h1 {
+.titre1 {
   font-size: 26px;
   font-style: normal;
   margin-bottom: 5px;
   padding-bottom: 0;
   font-weight: bold;
+  margin-top: 30px;
 }
 
 .carte h2 {
@@ -119,7 +120,7 @@ strong {
   }
 }*/
 /* section */
-section {
+.partiesection {
   display: flex;
   flex-wrap: wrap;
   font-family: "roboto";
@@ -258,7 +259,7 @@ aside {
   padding: 0 0 60px 0;
 }
 
-aside h1 {
+aside .titre1 {
   font-size: 26px;
   font-weight: bold;
   padding: 0 40px 0 40px;
@@ -403,16 +404,21 @@ main .boutoncoeur {
   100% {
     color: #9356dc;
     font-weight: bold;
-    background: -moz-linear-gradient(top, #9356dc 0%, #ff79da 100%);
-    background: -webkit-linear-gradient(top, #9356dc 0%, #ff79da 100%);
     background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }
 /*
+ background: linear-gradient(to bottom, $primaire 0%, $secondaire 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  background: -moz-linear-gradient(top, $primaire 0%, $secondaire 100%);
+    background: -webkit-linear-gradient(top, $primaire 0%, $secondaire 100%);
+     -webkit-text-fill-color: transparent;
+
 font-size: 40px;
 background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
 background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
@@ -606,39 +612,39 @@ main .menu {
 }
 
 .child2 {
-  animation: debut 500ms 800ms linear both;
+  animation: debut 500ms 900ms linear both;
 }
 
 .child3 {
-  animation: debut 500ms 1000ms linear both;
-}
-
-.child4 {
   animation: debut 500ms 1200ms linear both;
 }
 
+.child4 {
+  animation: debut 500ms 1500ms linear both;
+}
+
 .child5 {
-  animation: debut 500ms 1400ms linear both;
-}
-
-.child6 {
-  animation: debut 500ms 1600ms linear both;
-}
-
-.child7 {
   animation: debut 500ms 1800ms linear both;
 }
 
+.child6 {
+  animation: debut 500ms 2100ms linear both;
+}
+
+.child7 {
+  animation: debut 500ms 2400ms linear both;
+}
+
 .child8 {
-  animation: debut 500ms 2000ms linear both;
+  animation: debut 500ms 2700ms linear both;
 }
 
 .child9 {
-  animation: debut 500ms 2200ms linear both;
+  animation: debut 500ms 3000ms linear both;
 }
 
 .child10 {
-  animation: debut 500ms 2400ms linear both;
+  animation: debut 500ms 3300ms linear both;
 }
 
 .child11 {
@@ -746,7 +752,7 @@ main h2 {
 
 main h3 {
   margin: 0;
-  font-weight: 1;
+  font-weight: 100;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1300,7 +1306,16 @@ nav {
 /* ok */
 .pageload {
   background-color: rgba(255, 255, 255, 0.2);
-  animation: hideafter3s 3s forwards;
+  animation: hideafter3s 3900ms forwards;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .loadspinner {
@@ -1342,11 +1357,14 @@ nav {
 }
 @keyframes haut1 {
   90% {
+    transform: translateY(-20px);
+  }
+  /* 90% {
     transform: translateY(-10px) rotate(20deg);
   }
   100% {
     transform: rotateY(0);
-  }
+  }*/
 }
 @keyframes haut2 {
   90% {
@@ -1355,16 +1373,20 @@ nav {
 }
 @keyframes haut3 {
   90% {
-    transform: translateY(-10px) rotate(20deg);
+    transform: translateY(-20px);
   }
 }
 @keyframes hideafter3s {
   80% {
     opacity: 1;
   }
+  99% {
+    z-index: 10000;
+  }
   100% {
-    display: none;
+    /* display: none;*/
     opacity: 0;
+    z-index: -1;
   }
 }
 
