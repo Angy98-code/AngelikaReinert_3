@@ -375,7 +375,6 @@ article img {
   color: black;
 }
 
-
 main .boutoncoeur {
   padding-right: 15px;
 }
@@ -396,7 +395,6 @@ main .boutoncoeur {
   }
 }*/
 
-
 @keyframes color {
   0% {
     color: $secondaire;
@@ -407,14 +405,29 @@ main .boutoncoeur {
     font-weight: bold;
   }
   100% {
-    color: $primaire;
+    /*color: $primaire;*/
     font-weight: bold;
-     background: linear-gradient(to bottom, $primaire 0%, $secondaire 100%);
- background-clip: text;
--webkit-background-clip: text;
-color: transparent;
-    }
+    background: linear-gradient(to bottom, $primaire 0%, $secondaire 100%);
+    /*  background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
+.bon p {
+  padding: 50px 0 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.2);
+  font: 900 60px "shrikland";
+  font-style: oblique;
+  text-align: center;
+}
+.background-color {
+  background: linear-gradient(to bottom, $primaire 0%, $secondaire 100%);
+}
+
 /*
  background: linear-gradient(to bottom, $primaire 0%, $secondaire 100%);
     -webkit-background-clip: text;
@@ -1271,7 +1284,7 @@ nav {
   display: flex;
   margin: auto;
   border-radius: 15px;
-  margin-top: 300px;
+  margin-top: 180px;
 }
 
 .barre {
@@ -1283,7 +1296,7 @@ nav {
   transform: scaleX(1);
   animation-fill-mode: backwards;
   opacity: 0;
-  animation: barrre 3000ms 150ms;
+  animation: barrre 3100ms 150ms;
 }
 .barre:active {
   animation: barrre 1000ms;
